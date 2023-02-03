@@ -9,11 +9,17 @@ import { LogingComponent } from './components/loging/loging.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './components/home/home.component';
+import { NgModel } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { InfoUserComponent } from './components/info-user/info-user.component';
 @NgModule({
   declarations: [
     AppComponent,
     LogingComponent,
-    RegistroComponent
+    RegistroComponent,
+    HomeComponent,
+    InfoUserComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +27,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     NgbModule,
     NgbAlertModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

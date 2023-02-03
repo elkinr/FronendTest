@@ -1,66 +1,62 @@
 <section class="text-center">
-    <!-- Background image -->
-    <div class="p-5 bg-image Image" ></div>
-    <!-- Background image -->
-  
-    <div class="card mx-4 mx-md-5 shadow-5-strong Content">
-      <div class="card-body py-5 px-md-5">
-  
-        <div class="row d-flex justify-content-center">
-          <div class="col-lg-8">
-            <h2 class="fw-bold mb-5">Registro</h2>
-            <form [formGroup]="FormPersona">
-              <!-- 2 column grid layout with text inputs for the first and last names -->
-              <div class="row">
-                <div class="col-md-6 mb-4">
-                  <div class="form-outline">
-                    <input type="text" id="form3Example1" class="form-control" formControlName="nombres"/>
-                    <label class="form-label" for="form3Example1" >Nombres</label>
-                  </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                  <div class="form-outline">
-                    <input type="text" id="form3Example2" class="form-control" formControlName="apellidos"/>
-                    <label class="form-label" for="form3Example2" >Apellidos</label>
-                  </div>
+  <div class="p-5 bg-image Image"></div>
+
+  <div class="card mx-4 mx-md-5 shadow-5-strong Content">
+    <div class="card-body py-5 px-md-5">
+
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-8">
+          <h2 class="fw-bold mb-5">Registro</h2>
+          <form [formGroup]="FormPersona">
+
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <input type="text" id="form3Example1" class="form-control" formControlName="nombres" />
+                  <label class="form-label" for="form3Example1">Nombres</label>
                 </div>
               </div>
-  
-              <!-- Email input -->
-              <div class="form-outline mb-4">
-                <input type="text" id="form3Example3" class="form-control" formControlName="numerodeIdentificacion"/>
-                <label class="form-label" for="form3Example3">Numero de Identificacion</label>
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <input type="text" id="form3Example2" class="form-control" formControlName="apellidos" />
+                  <label class="form-label" for="form3Example2">Apellidos</label>
+                </div>
               </div>
-  
-              <!-- Password input -->
-              <div class="form-outline mb-4">
-                <input type="email" id="form3Example4" class="form-control" formControlName="email"/>
-                <label class="form-label" for="form3Example4">Email</label>
-              </div>
+            </div>
 
-              <div class="form-outline mb-4">
-                <input type="text" id="form3Example4" class="form-control" formControlName="tipoIdentificacion"/>
-                <label class="form-label" for="form3Example4">Tipo identificación</label>
-              </div>
+            <div class="form-outline mb-4">
+              <input type="text" id="form3Example3" class="form-control" formControlName="numerodeIdentificacion" />
+              <label class="form-label" for="form3Example3">Numero de Identificacion</label>
+            </div>
 
-            </form>
-            <form [formGroup]="FormUsuario">
-              <div class="form-outline mb-4">
-                <input type="text" id="form3Example4" class="form-control" formControlName="usuario" />
-                <label class="form-label" for="form3Example4">Usuario</label>
-              </div>
+            <div class="form-outline mb-4">
+              <input type="email" id="form3Example4" class="form-control" formControlName="email" />
+              <label class="form-label" for="form3Example4">Email</label>
+            </div>
 
-              <div class="form-outline mb-4">
-                <input type="password" id="form3Example4" class="form-control" formControlName="pass"/>
-                <label class="form-label" for="form3Example4">Paas</label>
-              </div>
-            </form>
-            <button type="submit" class="btn btn-primary btn-block mb-4"
-            (click)="Enviar()">
-              Registar
-            </button>
-          </div>
+            <div class="form-outline mb-4">
+              <input type="text" id="form3Example4" class="form-control" formControlName="tipoIdentificacion" />
+              <label class="form-label" for="form3Example4">Tipo identificación</label>
+            </div>
+
+          </form>
+          <form [formGroup]="FormUsuario">
+            <div class="form-outline mb-4">
+              <input type="text" id="form3Example4" class="form-control" formControlName="usuario" />
+              <label class="form-label" for="form3Example4">Usuario</label>
+            </div>
+
+            <div class="form-outline mb-4">
+              <input type="password" id="form3Example4" class="form-control" formControlName="pass" />
+              <label class="form-label" for="form3Example4">Paas</label>
+            </div>
+          </form>
+          <button type="submit" class="btn btn-primary btn-block mb-4" (click)="Enviar()"
+            [disabled]="FormPersona.invalid || FormUsuario.invalid">
+            Registar
+          </button>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>

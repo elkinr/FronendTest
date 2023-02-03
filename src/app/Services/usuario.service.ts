@@ -13,4 +13,9 @@ export class UsuarioService {
     const url = `${environment.url}/Usuario`;
     return this.http.post(url,usuario);
   }
+
+  public Get(){
+    const url = `${environment.url}/Usuario`;
+    return this.http.get<Usuario[]>(url);
+  }
 }

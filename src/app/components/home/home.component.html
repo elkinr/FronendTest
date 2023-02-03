@@ -1,0 +1,29 @@
+<nav class="navbar navbar-light bg-light">
+  <form class="form-inline" [formGroup]="Formvalue">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" formControlName="value"
+      (keyup)="Search()">
+  </form>
+  <a class="navbar-brand" [routerLink]="'/'">Salir</a>
+</nav>
+<br>
+<div *ngIf="UsersgIt && !Render" class="row">
+  <div *ngFor="let user of UsersgIt" class="col-sm-3">
+    <div class="card CardUser">
+      <img class="card-img-top" [src]="user.avatar_url" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Informacion</h5>
+        <strong>User: </strong>
+        <p class="card-text">{{user.login}}</p>
+      </div>
+      <div class="card-body">
+        <a [href]="user.html_url" class="card-link" target="_blank">Perfil Github</a>
+        <a [routerLink]="['/User',user.login]" class="card-link" target="_blank">Informacion Adicional</a>
+      </div>
+    </div>
+    <br>
+  </div>
+</div>
+
+<div class="spinner-border" role="status" *ngIf="Render">
+  <span class="visually-hidden">Cargando</span>
+</div>

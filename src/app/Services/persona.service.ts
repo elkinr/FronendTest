@@ -14,8 +14,4 @@ export class PersonaService {
     return this.http.post<Persona>(url,persona);
   }
 
-  public Get(){
-    const url = `${environment.url}/Personas`;
-     return this.http.get(url);
-  }
 }

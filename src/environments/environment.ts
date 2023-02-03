@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  url: "https://localhost:7087/api"
+  url: "https://localhost:7087/api",
+  urlgit: "https://api.github.com/search/users?q",
+  userinfo: "https://api.github.com/users"
 };
 
 /*

@@ -1,0 +1,21 @@
+<div class="card CardUser">
+    <img class="card-img-top" [src]="InfoUser.avatar_url" alt="Card image cap">
+    <div class="card-body">
+        <div *ngIf="InfoUser.name">
+            <h5>Nombre: </h5>
+            <p class="card-text">{{InfoUser.name}}</p>
+        </div>
+        <h5>Numero de seguidores</h5>
+        <p class="card-text">{{InfoUser.followers}}</p>
+        <h5>Personas Siguiendo</h5>
+        <p class="card-text">{{InfoUser.following}}</p>
+        <h5>Repositorios Publicos</h5>
+        <p class="card-text">{{InfoUser.public_repos}}</p>
+        <h5>Git Publicos</h5>
+        <p class="card-text">{{InfoUser.public_gists}}</p>
+        <h5>Creado en</h5>
+        <p class="card-text">{{InfoUser.created_at | date:'mediumDate'}}</p>
+        <h5>Actualizado en</h5>
+        <p class="card-text">{{InfoUser.updated_at | date:'mediumDate'}}</p>
+    </div>
+</div>
